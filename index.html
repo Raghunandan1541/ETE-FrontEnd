@@ -10,10 +10,33 @@
 </head>
 <body>
 	<div class="container">
-		<input type="text" name="country" id="nation" placeholder="country"/>
-		<input type="date" name="sDate" id="startDate" />
-		<input type="date" name="eDate" id="endDate" />
-		<button type="submit">Submit</button>
+		<div class="field">
+			<div class="field-group">
+				<label>Enter Country : </label>
+				<input type="text" id="nation" placeholder="country"/>
+			</div>
+			<div class="field-group">
+				<label>Enter Start Date :</label>
+				<input type="date" id="startDate" />
+			</div>
+			<div class="field-group">
+				<label>Enter End Date : </label>
+				<input type="date" id="endDate" />
+			</div>
+			<div class="field-group">
+				<button id="button">Submit</button>
+			</div>
+			
+		</div>
+
+		<div class="result" id="result">
+			<p>Confirmed Cases : <span id="confirmed"></span> </p>
+			<p>Active Cases : <span id="active"></span></p>
+			<p>Death Cases : <span id="deaths"></span> </p>
+		</div>
 	</div>
+	
+
+	<script src="./js/covidData.js"></script>
 </body>
 </html>

@@ -6,17 +6,30 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-direction: column;
 	background-image: linear-gradient(to bottom right, #ee5203, #09319e);
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	padding: 5vh;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .container {
-	width: 75%;
+	width: 90%;
+	display: flex;
+	flex-direction: column;
+}
+.field {
+	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+}
+.field-group {
+	display: flex;
+	flex-direction: column;
+	color: #fff;
+	font-size: 1em;
 }
 
 input {
@@ -26,6 +39,7 @@ input {
 	outline: none;
 }
 button {
+	margin-top: 0.5em;
 	padding: 0.5em 1.5em;
 	font-size: 1em;
 	border: none;
@@ -33,4 +47,15 @@ button {
 	color: #fff;
 	background-color: #dc143c;
 	cursor: pointer;
+}
+
+.result {
+	width: 100%;
+	color: #fff;
+	font-size: 2em;
+	font-weight: 500;
+	margin-top: 3em;
+}
+span {
+	color: #ff8c00;
 }
