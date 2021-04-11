@@ -1,0 +1,36 @@
+* {
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: linear-gradient(to bottom right, #ee5203, #09319e);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	padding: 5vh;
+}
+
+.container {
+	width: 75%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+input {
+	padding: 0.5em;
+	font-size: medium;
+	border: none;
+	outline: none;
+}
+button {
+	padding: 0.5em 1.5em;
+	font-size: 1em;
+	border: none;
+	outline: none;
+	color: #fff;
+	background-color: #dc143c;
+	cursor: pointer;
+}
