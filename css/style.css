@@ -50,6 +50,7 @@ button {
 }
 
 .result {
+	display: none;
 	width: 100%;
 	color: #fff;
 	font-size: 2em;

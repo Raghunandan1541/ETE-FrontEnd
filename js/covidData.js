@@ -8,9 +8,28 @@ const active=document.querySelector("#active");
 const deaths=document.querySelector("#deaths");
 
 button.addEventListener('click', () => {
+
+	var today = new Date();
+	var d = String(today.getDate()).padStart(2, '0');
+	var m = String(today.getMonth() + 1).padStart(2, '0');
+	var y = today.getFullYear();
+
+	today = y + '-' + m + '-' + (d+1);
+	
 	if(country.value === '' || sDate.value === '' || eDate.value === '') {
+
 		alert('Enter the required field');
+
+	} else if(eDate.value > today) {
+
+		alert('End Date must be less then current date');
+
+	} else if(sDate.value > eDate.value) {
+
+		alert('Start Date must be less then end Date');
+
 	} else {
+
 		var url="https://api.covid19api.com/country/"+country.value+"?from="+sDate.value+"T00:00:00Z&to="+eDate.value+"T00:00:00Z";
 
 		fetch(url)
@@ -20,16 +39,16 @@ button.addEventListener('click', () => {
 			var length=res.length;
 			var index=length-1;
 
-			var c=res[index].Confirmed;
-			var a=res[index].Active;
-			var d=res[index].Deaths;
+			var conf=res[index].Confirmed;
+			var actv=res[index].Active;
+			var dths=res[index].Deaths;
 
-			confirmed.innerHTML=c;
-			active.innerHTML=a;
-			deaths.innerHTML=d;
+			confirmed.innerHTML=conf;
+			active.innerHTML=actv;
+			deaths.innerHTML=dths;
 
 			document.querySelector("#result").style.display="block";
 			
-		})
+		});
 	}
 });
